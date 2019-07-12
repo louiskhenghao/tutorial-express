@@ -87,7 +87,7 @@ Create APIs
 }
 ```
 
-6. DELETE /category/:id
+6. DELETE /product/:id
 
 ```
 {
