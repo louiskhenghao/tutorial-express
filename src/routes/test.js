@@ -5,8 +5,7 @@ module.exports = express => {
 
   router.get("/test", controller.get);
 
-  router.post("/test", function(req, res) {
-    res.send("POST route on things.");
-  });
+  router.post("/test", controller.post);
+
   return router;
 };

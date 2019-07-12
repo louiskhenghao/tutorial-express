@@ -33,12 +33,22 @@ app.get("/hello", function(req, res) {
 });
 
 app.post("/hello", function(req, res) {
-  res.send("You just called the post method at '/hello'!\n");
+  res.send(`Name: ${req.body.name} Message: ${req.body.message}`);
+  // res.send("You just called the post method at '/hello'!\n");
 });
 
-app.get("/hello/:name", function(req, res) {
-  res.send("Hi, " + req.params.name);
-});
+app.get(
+  "/hello/:name",
+  (req, res, next) => {
+    const name = req.params.name;
+
+    req.isSOhai = name === "louis";
+    next();
+  },
+  function(req, res) {
+    res.send(`Hi,  ${req.params.name} isSohai? ${req.isSOhai}`);
+  }
+);
 
 app.get("/things/:id([0-9]{5})", function(req, res) {
   res.send("id: " + req.params.id);
