@@ -1,0 +1,31 @@
+{
+  "name": "tutorial-express",
+  "version": "1.0.0",
+  "description": "An express tutorial for beginner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start:dev": "nodemon --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/louiskhenghao/tutorial-express.git"
+  },
+  "keywords": [
+    "Express",
+    "tutorial",
+    "beginner"
+  ],
+  "author": "Louis Loo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiskhenghao/tutorial-express/issues"
+  },
+  "homepage": "https://github.com/louiskhenghao/tutorial-express#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
